@@ -23,4 +23,5 @@ export DOTFILES=$HOME/.dotfiles
 
 export BASH_THEME="daniel"
 
+source ~/.bash_aliases
 source $DOTFILES/bash/setup.sh

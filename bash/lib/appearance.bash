@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # colored grep
-export GREP_OPTIONS='--color=auto'
+GREP_OPTIONS='--color=auto'
+alias grep="grep $GREP_OPTIONS"
 export GREP_COLOR='1;33'
 
 # colored ls
