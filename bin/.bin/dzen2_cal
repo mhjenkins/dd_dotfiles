@@ -1,0 +1,36 @@
+#!/bin/bash
+
+. ~/.config/bspwm/theme.cfg
+
+WIDTH=300
+LINES=20
+FONT="Roboto Mono"
+FONT_SIZE="16"
+
+X=0
+Y=0
+#Y=0
+
+TODAY=$(expr `date +'%d'` + 0)
+MONTH=`date +'%m'`
+YEAR=`date +'%Y'`
+
+(
+echo ""
+date +"^fg(#$FG_COLOR)%A, %d %b %Y^fg()"
+echo ""
+
+cal | sed -re "s/^(.*[A-Za-z][A-Za-z]*.*)$/^fg(#$HL_COLOR)\1^fg()/;s/(^|[ ])($TODAY)($|[ ])/\1^fg(#$HL_COLOR)\2^fg()\3/"
+
+# next month, hilight header
+if [ $MONTH -eq 12 ]; then
+  YEAR=`expr $YEAR + 1`
+  MONTH=1
+else
+  MONTH=$(expr $MONTH + 1)
+fi
+#cal `expr \( $MONTH + 1 \) % 12` $YEAR | sed -e "s/^\(.*[A-Za-z][A-Za-z]*.*\)$/^fg(#$HL_COLOR)\1^fg()/"
+cal $MONTH $YEAR | sed -e "s/^\(.*[A-Za-z][A-Za-z]*.*\)$/^fg(#$HL_COLOR)\1^fg()/"
+
+) | dzen2 -fg "#${FG_MUTED_COLOR}" -bg "#${BG_COLOR}" -fn "${FONT}:pixelsize=${FONT_SIZE}" -x $X -y $Y -w $WIDTH -l $LINES -sa c -p -e "onstart=raise,uncollapse;button3=exit;onquit=exec:rm ${TMPFILE};"
+

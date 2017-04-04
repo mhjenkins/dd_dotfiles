@@ -1,0 +1,28 @@
+xset -b
+xset r rate 200 30
+
+# Transparent windows, tearing fixes, and invert colors
+# (sleep 3s && compton --dbus) &
+
+sxhkd &
+
+# Background
+nitrogen --restore &
+
+# Panel
+(sleep 1s && tint2 -c ~/.config/tint2/themes/Numix/red_taskbar/tint2rc) &
+(sleep 1s && conky) &
+
+# Notifications
+(sleep 1s && dunst) &
+
+# System Tray
+# (sleep 3s && cbatticon -u 20 -i notification -c "poweroff" -l 15 -r 3) &
+(sleep 3s && volumeicon) &
+(sleep 3s && nm-applet) &
+(sleep 3s && blueman-applet) &
+
+# Screensaver / Lockscreen
+(sleep 3s && xscreensaver -no-splash) &
+# xautolock -locker myi3lock -time 10 -corners 0-00 -notify 30 -notifier 'notify-send "System will lock in 30s"' &
+# xss-lock -- /usr/local/bin/lock &

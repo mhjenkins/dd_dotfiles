@@ -4,8 +4,17 @@
 
 - `git clone --recursive git://github.com/danielcbaldwin/dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
-- `./setup.sh`
+- `./install.sh`
 
-The install rake task will symlink the appropriate files in `.dotfiles` to your
-home directory. Everything is configured and tweaked within `~/.dotfiles`,
-though.
+## requirements
+
+`stow`
+
+Can be obtained by using:
+`yaourt stow`
+`apt install stow`
+`brew install stow`
+
+## notes
+
+You can also install the individual configs by using the folder, as an example: `stow vim`

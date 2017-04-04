@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Pause Music
+player pause
+
+if [ -n "$(pgrep -u $(whoami) xscreensaver)" ]; then
+  xscreensaver-command --lock
+fi
+
+if [ -n "$(pgrep -u $(whoami) xautolock)" ]; then
+  xautolock -locknow
+fi
