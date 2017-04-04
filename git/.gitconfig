@@ -1,19 +1,36 @@
 [user]
-	name = Daniel Baldwin
-	email = danielcbaldwin@gmail.com
-[alias]
-	st = status
-	clone = clone --recursive
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+  name = michael jenkins
+  email = mjenkins@masteryconnect.com
+[pull]
+  default = current
 [push]
-	default = current
+  default = current
 [color]
-	diff = auto
-  status = auto
-  branch = auto
-	ui = true
-[core]
-	excludesfile = ~/.gitignore_global
-  editor = vim
-[github]
-  user = danielcbaldwin
+  diff = true
+  status = true
+  branch = true
+[alias]
+  st = status
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  fu = fetch upstream
+  fo = fetch origin
+  com = commit -m
+  cam = commit -am
+  ca = commit -a
+  ci = commit
+  pr = pull --rebase
+  po = push origin
+  pom = push origin master
+  pod = push origin develop
+  freebase = rebase upstream/master
+  rebud = rebase upstream/develop
+  find = !git ls-tree -r --name-only HEAD | grep --color $1 # Find filename in the repository
+  h = !git --no-pager log origin/master..HEAD --abbrev-commit --pretty=oneline # Differnce between master and current branch
+  g = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative # Log with color formatting
+  lp = log --pretty=format:'%Cred%H%Creset -%C(yellow)%d%Creset %Cblue%an%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  reup = reset --hard upstream/develop
+  reupm = reset --hard upstream/master
+
