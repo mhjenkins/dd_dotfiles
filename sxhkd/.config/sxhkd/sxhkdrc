@@ -64,7 +64,7 @@ super + w
   myrofi -show window
 
 # rofi - Drun
-control + space
+super + space
   myrofi -show drun
 
 #########################

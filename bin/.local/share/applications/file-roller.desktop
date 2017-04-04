@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=file-roller
+MimeType=application/zip;
+Name=file-roller
+NoDisplay=true
+Type=Application

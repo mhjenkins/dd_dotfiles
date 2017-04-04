@@ -35,9 +35,9 @@ alias ldu='du -cks * | sort -rn | head -15' # Lists the size of all the folders
 alias sudo='sudo '
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+# alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+# alias localip="ipconfig getifaddr en1"
+# alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # OS X has no `md5sum`, so use `md5` as a fallback
 type -t md5sum > /dev/null || alias md5sum="md5"

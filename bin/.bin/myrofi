@@ -5,12 +5,12 @@ rofi \
   -lines 8 \
   -eh 2 \
   -width 40 \
-  -padding 80 \
-  -bw 1 \
-  -color-window "#2d2d2d, #393939, #000000" \
-  -color-normal "#2d2d2d, #ffffff, #2d2d2d, #2d2d2d, #d64937" \
-  -color-active "#2d2d2d, #f4be36, #2d2d2d, #2d2d2d, #d64937" \
-  -color-urgent "#2d2d2d, #ffffff, #2d2d2d, #2d2d2d, #d64937" \
+  -padding 40 \
+  -bw 4 \
+  -color-window "argb: f02d2d2d, argb: c39ca51d, argb: 00f0f0f" \
+  -color-normal "argb: 02d2d2d, #aaaaaa, argb: 02d2d2d, argb: 02d2d2d, #518fbb" \
+  -color-active "argb: 02d2d2d, #9ca51d, argb: 02d2d2d, argb: 02d2d2d, #518fbb" \
+  -color-urgent "argb: 02d2d2d, #ffffff, argb: 02d2d2d, argb: 02d2d2d, #518fbb" \
   -font "Roboto 18" \
   -separator-style none \
   -hide-scrollbar \
@@ -18,6 +18,23 @@ rofi \
   $@
 
 #  -modi run,drun,window \
+
+# rofi \
+#   -modi run,drun,window \
+#   -lines 8 \
+#   -eh 2 \
+#   -width 40 \
+#   -padding 80 \
+#   -bw 1 \
+#   -color-window "#2d2d2d, #393939, #000000" \
+#   -color-normal "#2d2d2d, #ffffff, #2d2d2d, #2d2d2d, #d64937" \
+#   -color-active "#2d2d2d, #f4be36, #2d2d2d, #2d2d2d, #d64937" \
+#   -color-urgent "#2d2d2d, #ffffff, #2d2d2d, #2d2d2d, #d64937" \
+#   -font "Roboto 18" \
+#   -separator-style none \
+#   -hide-scrollbar \
+#   -terminal urxvt \
+#   $@
 
 # rofi \
 #   -modi run,drun,window \

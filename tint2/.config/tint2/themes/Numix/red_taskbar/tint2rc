@@ -96,7 +96,7 @@ mouse_scroll_up = toggle
 mouse_scroll_down = iconify
 
 # Battery
-battery = 0
+battery = 1
 battery_low_status = 20
 battery_low_cmd = notify-send "battery low"
 battery_hide = 99
