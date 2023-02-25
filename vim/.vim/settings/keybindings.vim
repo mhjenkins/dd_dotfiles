@@ -16,7 +16,7 @@ vnoremap > >gv
 
 " Toggle search highlights
 " http://www.vimbits.com/bits/21
-"nnoremap <silent><Leader><space> :nohls<CR>
+nnoremap <silent><Leader><space> :nohls<CR>
 
 nnoremap <Leader>pp :set invpaste paste?<CR>
 set pastetoggle=<Leader>pp

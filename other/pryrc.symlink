@@ -2,7 +2,7 @@ Pry.config.editor = 'vim'
 
 # Custom prompt
 prompt = defined?(Rails) ? Rails.application.class.parent_name : File.basename(Dir.pwd)
-Pry.config.prompt = [
+Pry::Prompt = [
   proc { |obj, nest_level, _| "#{prompt} (#{obj}):#{nest_level} > " },
   proc { |obj, nest_level, _| "#{prompt} (#{obj}):#{nest_level} *"}
 ]

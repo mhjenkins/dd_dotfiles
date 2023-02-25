@@ -1,10 +1,15 @@
 [user]
-	name = Daniel Baldwin
-	email = danielcbaldwin@gmail.com
+	name = Michael Jenkins
+	email = michael.jenkins@tapresearch.com
 [alias]
 	st = status
+	co = checkout
+  br = branch
 	clone = clone --recursive
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+	pr = pull --rebase
+	com = commit -m
+	cam = commit -am
 [push]
 	default = current
 [color]
@@ -16,7 +21,7 @@
 	excludesfile = ~/.gitignore_global
   editor = vim
 [github]
-  user = danielcbaldwin
+  user = mhjenkins
 [url "git@bitbucket.org:"]
   insteadOf = https://bitbucket.org/
 [url "ssh://git@github.com/"]
@@ -25,3 +30,5 @@
 	prune = true
 [diff]
 	colorMoved = zebra
+[url "git@github.com:"]
+	insteadOf = https://github.com/
