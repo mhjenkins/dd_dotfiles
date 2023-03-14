@@ -23,3 +23,6 @@ vmap("<right>", "l")
 -- Spelling
 nmap("<leader>s", ":setlocal spell! spelllang=en_us<CR>")
 
+-- Clear highlights
+nmap("<leader><space>", ":nohls<CR>", { silent = true })
+
