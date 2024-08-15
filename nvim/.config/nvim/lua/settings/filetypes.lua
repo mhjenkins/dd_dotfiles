@@ -1,19 +1,19 @@
-vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
+vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
   pattern = "*.as,*.json",
   command = "setfiletype javascript",
 })
 
-vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
+vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
   pattern = "*.ctp,*.thtml",
   command = "setfiletype php",
 })
 
-vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
+vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
   pattern = "*.jhtml,*.ejs",
   command = "setfiletype html",
 })
 
-vim.api.nvim_create_autocmd("BufRead,BufNewFile", {
+vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
   pattern = "*.rss",
   command = "setfiletype xml",
 })

@@ -48,10 +48,12 @@ if command -v op &> /dev/null; then
       opsignin ${account}
       session="OP_SESSION_${account}"
       #op list items --categories Secure\ Note --tags ssh-key --session "${!session}" | jq -r '.[] .uuid' | xargs -I% bash -c "op get item % --fields notesPlain --session ${!session} | ssh-add -"
-      for id in $(op list items --categories Secure\ Note --tags ssh-key --session "${!session}" | jq -r '.[] .uuid'); do
-        item=$(op get item ${id} --fields title,notesPlain --session ${!session})
+      #for id in $(op item list --categories Secure\ Note --tags ssh-key --session "${!session}" | jq -r '.[] .uuid'); do
+      for id in $(op item list --categories Secure\ Note --tags ssh-key --session "${!session}" --format=json | jq -r '.[] .id'); do
+        item=$(op item get ${id} --format=json)
         name=$(echo $item | jq -r '.title')
-        key=$(echo $item | jq -r '.notesPlain')
+        #key=$(echo $item | jq -r '.notesPlain')
+        key=$(echo $item | jq -r '.fields | .[0] | .value')
         echo "Adding: ${name}"
         echo "$key" | ssh-add -
       done
