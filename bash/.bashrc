@@ -2,6 +2,7 @@
 # ~/.bashrc
 #
 
+[[ -f $HOME/.bash_profile ]] && source $HOME/.bash_profile
 export DOTFILES="${HOME}/.bash"
 export BASHFILES="${HOME}/.bash"
 [[ -e "${DOTFILES}/setup.sh" ]] && source "${DOTFILES}/setup.sh"
@@ -18,4 +19,10 @@ eval "$(direnv hook bash)"
   #  eval “$(rbenv init - bash)”
   #fi
 #fi
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mjenkins/google-cloud-sdk/path.bash.inc' ]; then . '/Users/mjenkins/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mjenkins/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/mjenkins/google-cloud-sdk/completion.bash.inc'; fi

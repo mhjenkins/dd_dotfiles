@@ -18,3 +18,7 @@ Can be obtained by using:
 ## notes
 
 You can also install the individual configs by using the folder, as an example: `stow vim`
+
+## aditional info:
+
+nerdfonts are required for nvim icons: https://www.nerdfonts.com/font-downloads

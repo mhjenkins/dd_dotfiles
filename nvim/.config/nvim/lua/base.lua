@@ -29,7 +29,7 @@ vim.opt.smartcase = true
 vim.opt.autoread = true                -- Update open files when changed externally
 vim.opt.laststatus = 2
 
-vim.opt.termencoding = "utf-8"
+--vim.opt.termencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.showmode = true
 vim.opt.showcmd = false

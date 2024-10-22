@@ -36,17 +36,17 @@ return {
   end,
   config = function()
     require("nvim-tree").setup({
-        sort_by = "case-sensitive",
+        sort_by = "case_sensitive",
         view = {
           width = 40,
-          mappings = {
-            list = {
-              { key = "u", action = "dir_up" },
-              { key = "X", action = "cut" },
-              { key = "x", action = "close_node" },
-              { key = "D", action = "cd" },
-            },
-          },
+          --mappings = {
+          --  list = {
+          --    { key = "u", action = "dir_up" },
+          --    { key = "X", action = "cut" },
+          --    { key = "x", action = "close_node" },
+          --    { key = "D", action = "cd" },
+          --  },
+          --},
         },
         renderer = {
           indent_markers = {

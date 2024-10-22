@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
-  pattern = "*.as,*.json",
+  pattern = "*.bzlmod,*.as,*.json",
   command = "setfiletype javascript",
 })
 
@@ -14,9 +14,10 @@ vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
 })
 
 vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
-  pattern = "*.rss",
+  pattern = "*.xpl,*.rss",
   command = "setfiletype xml",
 })
+
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "go",

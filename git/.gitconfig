@@ -1,6 +1,6 @@
 [user]
 	name = Michael Jenkins
-	email = michael.jenkins@tapresearch.com
+	email = michael.jenkins@derivita.com
 [alias]
 	st = status
 	co = checkout
@@ -20,8 +20,8 @@
 [core]
 	excludesfile = ~/.gitignore_global
   editor = vim
-[github]
-  user = mhjenkins
+#[github]
+#  user = mhjenkins
 [url "git@bitbucket.org:"]
   insteadOf = https://bitbucket.org/
 [url "ssh://git@github.com/"]
@@ -30,5 +30,5 @@
 	prune = true
 [diff]
 	colorMoved = zebra
-[url "git@github.com:"]
+ [url "git@github.com:"]
 	insteadOf = https://github.com/

@@ -16,6 +16,7 @@ stow urxvt && echo "✓ urxvt"
 # Dev
 stow ruby && echo "✓ ruby"
 stow vim && echo "✓ vim"
+stow nvim && echo "✓ nvim"
 stow tmux && echo "✓ tmux"
 stow git && echo "✓ git"
 
